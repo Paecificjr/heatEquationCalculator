@@ -3,14 +3,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 n = 10  # Number of constants to find
-length = 5  # Length of the rod
+length = np.pi  # Length of the rod
 constants = []  # Holds the constants that we output
-equation = "x * (5-x)"  # Function to find solution for
+equation = "(20 - ((10*x)/(np.pi/2)))"  # Function to find solution for
+low = np.pi/2
+high = np.pi
+#equation = "(10*x)/(np.pi/2)"
+#low = 0  # Lower bound
+#high = np.pi/2  # Upper bound
 
 # Create constants
 for i in range(1, n+1):
     function = eval("lambda x: " + equation + " * np.sin((i * np.pi * x) / length)")  # Function to integrate
-    area,  error  = scipy.integrate.quad(function, 0, 5)  # Integrate it
+    area,  error  = scipy.integrate.quad(function, low, high)  # Integrate it
     constants.append(area * (1/length) * 2)  # Add the constants after transforming them by the 2 and 1/length
 
 # Arrays used to hold the xy pairs
