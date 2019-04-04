@@ -13,7 +13,7 @@ class Equation:
 n = 100  # Number of constants to find
 length = np.pi  # Length of the rod
 constants = np.zeros(n)  # Holds the constants that we output
-equations = [Equation("(20 - ((10*x)/(np.pi/2)))", np.pi/2, np.pi), Equation("(10*x)/(np.pi/2)", 0, np.pi/2)]
+equations = [Equation("(20 - ((10*x)/(np.pi/2)))", np.pi/2, np.pi), Equation("(10*x)/(np.pi/2)", 0, np.pi/2)]  # Holds the initial conditions
 
 
 # Create constants for all equations
