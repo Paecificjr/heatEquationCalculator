@@ -14,9 +14,14 @@ class Equation:
 n = 100  # Number of constants to find
 length = np.pi  # Length of the rod
 constants = np.zeros(n)  # Holds the constants that we output
+<<<<<<< HEAD
 equations = [Equation("((20/np.pi)*x)", 0, np.pi/2), Equation("((-20/np.pi)*x+20)", np.pi/2, np.pi)]
 maxTime = 20
 timeStep = 0.1
+=======
+equations = [Equation("(20 - ((10*x)/(np.pi/2)))", np.pi/2, np.pi), Equation("(10*x)/(np.pi/2)", 0, np.pi/2)]  # Holds the initial conditions
+
+>>>>>>> ac914c26ecae04ff72033257d520b504e8b75ee2
 
 # Create constants for all equations
 for equation in equations:
